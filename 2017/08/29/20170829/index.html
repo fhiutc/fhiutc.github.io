@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | fhiutc&#39;s workshop</title>
+  <title>小小的笔记 | fhiutc&#39;s workshop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hello World!">
+  <meta name="description" content="记录一些实习练习中遇到的小问题，权当笔记。">
+<meta name="keywords" content="note">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/05/18/Hello/index.html">
+<meta property="og:title" content="小小的笔记">
+<meta property="og:url" content="http://yoursite.com/2017/08/29/20170829/index.html">
 <meta property="og:site_name" content="fhiutc&#39;s workshop">
-<meta property="og:description" content="Hello World!">
+<meta property="og:description" content="记录一些实习练习中遇到的小问题，权当笔记。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-04-16T15:48:46.522Z">
+<meta property="og:image" content="https://www.z4a.net/images/2017/08/29/84acada60ab0a8e.jpg">
+<meta property="og:image" content="https://www.z4a.net/images/2017/08/29/snipaste_20170829_110237.png">
+<meta property="og:image" content="https://www.z4a.net/images/2017/08/29/snipaste_20170829_142117.png">
+<meta property="og:updated_time" content="2017-08-29T12:42:09.171Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Hello World!">
+<meta name="twitter:title" content="小小的笔记">
+<meta name="twitter:description" content="记录一些实习练习中遇到的小问题，权当笔记。">
+<meta name="twitter:image" content="https://www.z4a.net/images/2017/08/29/84acada60ab0a8e.jpg">
   
     <link rel="alternative" href="/atom.xml" title="fhiutc&#39;s workshop" type="application/atom+xml">
   
@@ -156,27 +161,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hello" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20170829" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      小小的笔记
     </h1>
   
 
         
-        <a href="/2016/05/18/Hello/" class="archive-article-date">
-  	<time datetime="2016-05-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-18</time>
+        <a href="/2017/08/29/20170829/" class="archive-article-date">
+  	<time datetime="2017-08-29T12:06:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Hello World!</p>
+        <p><img src="https://www.z4a.net/images/2017/08/29/84acada60ab0a8e.jpg" alt=""><br>记录一些实习练习中遇到的小问题，权当笔记。</p>
+<a id="more"></a>
+<h2 id="1-验证邮件地址"><a href="#1-验证邮件地址" class="headerlink" title="1. 验证邮件地址"></a>1. 验证邮件地址</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mail_address = $(<span class="string">"#Email"</span>).val(); <span class="comment">//jquery选择器</span></div><div class="line"><span class="keyword">var</span> regexEmail = <span class="regexp">/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]&#123;2,3&#125;(\.[a-z]&#123;2&#125;)?)$/g</span>;</div><div class="line"><span class="keyword">if</span> (!regexEmail.test(mail_address)) &#123;</div><div class="line">    alert(<span class="string">"邮箱地址有误!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>说起来在我高中第一次接触到JavaScript的时候，我根本不知道正则表达式这个概念，当时看到这些像乱码一样的代码，也只是死记硬背了下来。。现在看来这个还是非常有必要去学习的。<a href="https://zhuanlan.zhihu.com/p/28058115" target="_blank" rel="external">另附几个常用的表单验证正则</a>。</p>
+<h2 id="2-不要忘记在数据库里添加自增序列"><a href="#2-不要忘记在数据库里添加自增序列" class="headerlink" title="2. 不要忘记在数据库里添加自增序列"></a>2. 不要忘记在数据库里添加自增序列</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Id</span></div><div class="line"><span class="meta">@Column</span>(name = <span class="string">"ID"</span>)</div><div class="line"><span class="meta">@SequenceGenerator</span>(name = <span class="string">"SEQ_XXBS_FWXX_ID"</span>, allocationSize = <span class="number">1</span>, sequenceName = <span class="string">"SEQ_XXBS_FWXX_ID"</span>)</div><div class="line"><span class="meta">@GeneratedValue</span>(strategy = GenerationType.SEQUENCE, generator = <span class="string">"SEQ_XXBS_FWXX_ID"</span>)</div><div class="line"><span class="keyword">private</span> Integer id;</div></pre></td></tr></table></figure>
+<p><img src="https://www.z4a.net/images/2017/08/29/snipaste_20170829_110237.png" alt=""><br>通常用于ID的自动自增。</p>
+<h2 id="3-简单的触发器"><a href="#3-简单的触发器" class="headerlink" title="3. 简单的触发器"></a>3. 简单的触发器</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">or</span> <span class="keyword">replace</span> <span class="keyword">trigger</span> fwxx_sj_sync</div><div class="line">    <span class="keyword">before</span> <span class="keyword">insert</span> <span class="keyword">on</span> t_xxbs_fwxx  </div><div class="line">    <span class="keyword">for</span> <span class="keyword">each</span> <span class="keyword">row</span></div><div class="line"><span class="keyword">declare</span></div><div class="line">    <span class="comment">-- local variables here</span></div><div class="line"><span class="keyword">begin</span></div><div class="line">    <span class="keyword">if</span> :new.xgsj <span class="keyword">is</span> <span class="literal">null</span> <span class="keyword">then</span></div><div class="line">    :new.xgsj:=<span class="keyword">sysdate</span>;</div><div class="line">    :new.xgr:=:new.cjr;</div><div class="line">    <span class="keyword">end</span> <span class="keyword">if</span>;</div><div class="line"><span class="keyword">end</span> fwxx_sj_sync;</div></pre></td></tr></table></figure>
+<p>原本是保存数据的时候只会保存创建时间和创建人，表里的修改时间和修改人在进行修改删除操作之前是空的，后来想到可以用触发器在插入数据的时候顺便把创建时间创建人赋为修改的初值。于是参考了网上的例子，主要是熟悉了<strong>:new</strong>关键字的使用。</p>
+<h2 id="4-将sysdate转为给正常人看的日期格式"><a href="#4-将sysdate转为给正常人看的日期格式" class="headerlink" title="4. 将sysdate转为给正常人看的日期格式"></a>4. 将sysdate转为给正常人看的日期格式</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">to_char(birth,'yyyy"年"fmmm"月"dd"日"') <span class="comment">--birth为一个date类型，直接保存了sysdate</span></div></pre></td></tr></table></figure>
+<p>关键在于fm，如果不加的话，8月会显示为08月，还是有点违和的。</p>
+<h2 id="5-JavaScript中把datepicker取到的字符串存为Date类型"><a href="#5-JavaScript中把datepicker取到的字符串存为Date类型" class="headerlink" title="5. JavaScript中把datepicker取到的字符串存为Date类型"></a>5. JavaScript中把datepicker取到的字符串存为Date类型</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tmp = $(<span class="string">"#birth"</span>).val();</div><div class="line"><span class="keyword">var</span> birth = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(tmp.replace(<span class="regexp">/-/g</span>, <span class="string">"/"</span>)));</div></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://www.z4a.net/image/STmMk" target="_blank" rel="external"><img src="https://www.z4a.net/images/2017/08/29/snipaste_20170829_142117.png" alt="snipaste_20170829_142117.png"></a></p>
+</blockquote>
+<p><a href="http://www.my97.net/demo/index.htm" target="_blank" rel="external">datepicker</a>插件取到的就是类似2017-08-29之类的字符串，然而我在后台把birth定义为了Date类型，本来是想在后台把Date换成String算了，后来一查发现在前端保存的时候换成Date类型这样修改更加方便。。</p>
 
       
 
@@ -206,6 +225,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">note</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -256,7 +286,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/05/18/Hello/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/29/20170829/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,15 +300,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/05/19/Picture-Test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          摄影手札 1
-        
-      </div>
-    </a>
   
+    <a href="/2017/01/17/2016-music/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2016年伴随我的十佳专辑</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
